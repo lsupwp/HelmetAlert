@@ -1,0 +1,43 @@
+{% extends "template.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row min-vh-100 justify-content-center align-items-center">
+        <div class="col-md-6 text-center">
+            <div class="error-content">
+                <h1 class="display-1 fw-bold text-primary">404</h1>
+                <h2 class="display-4 mb-4">Page Not Found</h2>
+                <p class="lead text-muted mb-4">
+                    ขอโทษค่ะ หน้าที่คุณกำลังมองหาไม่พบหรือไม่มีอยู่ในระบบ
+                </p>
+                <div class="mt-4">
+                    <a href="/" class="btn btn-primary btn-lg px-5">
+                        <i class="bi bi-house-door"></i> กลับสู่หน้าหลัก
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #333;
+    }
+    .error-content {
+        background: white;
+        padding: 3rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+    .display-1 {
+        font-size: 8rem;
+        animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+    }
+</style>
+{% endblock %}
